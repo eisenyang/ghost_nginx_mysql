@@ -31,7 +31,7 @@ install-begin(){
     apt install -y mysql-server
     mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$DB_PASSWD';flush privileges;"
 
-    curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash
+    curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash
     apt install -y nodejs
 
     npm install ghost-cli@latest -g
